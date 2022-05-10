@@ -6,12 +6,12 @@ const initialTodoState: TodoArrayModel = {
   particular_todo: {
     userId: 0,
     id: 0,
-    title: "",
+    todo: "",
     completed: false,
   },
 };
 
-const export default  todoSlice = createSlice({
+const todoSlice = createSlice({
   name: "todo",
   initialState: initialTodoState,
   reducers: {
@@ -22,4 +22,6 @@ const export default  todoSlice = createSlice({
       state.particular_todo = action.payload;
     },
   },
-}); 
+});
+
+export default todoSlice;
