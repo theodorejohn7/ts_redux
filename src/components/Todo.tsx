@@ -96,7 +96,7 @@ const Todo = () => {
       </Box>
       <TabPanel value={value} index={0}>
       <div>
-        <label>Enter the task Number : </label>
+        <label>Enter the Task number [1-30] : </label>
         <input
           onChange={(event) => {
             setTodo_id(parseInt(event.target.value));
@@ -119,7 +119,7 @@ const Todo = () => {
       </TabPanel>
       <TabPanel value={value} index={1}>
       <div>
-        <button onClick={clickHandler}> List All Todos</button>
+        <button onClick={clickHandler}> List All Tasks</button>
 
         <div>
           {/* <div className="todo-container">
