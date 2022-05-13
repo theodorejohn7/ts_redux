@@ -1,6 +1,5 @@
 import todoSlice from "./todo-slice";
-import { AnyAction } from "@reduxjs/toolkit";
-import { ThunkAction } from "@reduxjs/toolkit";
+import { AnyAction , ThunkAction} from "@reduxjs/toolkit";
 import { RootState } from "./index";
 import { TodoModel } from "../models/redux-models";
 import TodoService from "../service/todoService";
@@ -24,7 +23,7 @@ export const fetchTodos = (): ThunkAction<
 export const fetchParticularTodo = (
   todo_id: number
 ): ThunkAction<void, RootState, unknown, AnyAction> => {
-  return async (dispatch, getState) => {
+  return async (dispatch, _getState) => {
     const response: TodoModel = await TodoService.getParticularTodo(todo_id);
     dispatch(todoActions.setParticularTodo(response));
   };
